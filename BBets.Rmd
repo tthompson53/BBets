@@ -34,10 +34,7 @@ buildDY <- function(csize=35){
 
 ```
 
-```{r echo=FALSE }
-try1=buildDY(csize = 35)
-table(try1)
-```
+
 
 ```{r echo=FALSE}
 maxdup = function(inlist){
@@ -63,7 +60,6 @@ for (i in 1:1137) {
 out <- ifelse(trials>=2,1,-2) 
 bucket[j] <- sum(out)
 }
-hist(bucket)
 ```
 
 
