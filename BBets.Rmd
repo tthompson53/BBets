@@ -22,6 +22,26 @@ output: html_document: default
 
 <!--Explain and display the results of your method of coming up with the estimate of professor Brownlows betting!-->
 We want to run the simulation many times to get as accurate as possible. 30, 50, 60, and even 1000 are good numbers. The goal is to get the middle 95%. This simulation is going to be running 30 times to get as close to accurate as possible. 
+```{r echo=FALSE} 
+buildDY <- function(csize=35){
+  bdlist=1:365
+  out <- sample(bdlist,csize,replace=T)
+}
+
+```
+
+```{r echo=FALSE}
+try1=buildDY(csize = 35)
+table(try1)
+
+```
+
+```{r echo=FALSE}
+maxdup = function(inlist){
+    out <- max(table(inlist))
+}
+
+```
 
 ```{r}
 bucket=numeric()
