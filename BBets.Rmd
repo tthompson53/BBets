@@ -28,7 +28,6 @@ bucket=numeric()
 for (j in 1:30){
   
 
-
 brownlow=0
 trials = numeric()
 
@@ -38,7 +37,7 @@ for (i in 1:1137) {
  
 }
 
-out <- ifelse(trials>=2,1,-2) bets $2, wins= $1, loses = gives back $2
+out <- ifelse(trials>=2,1,-2) 
 bucket[j] <- sum(out)
 }
 hist(bucket)
