@@ -21,6 +21,29 @@ output: html_document: default
 #Profit Estimate
 
 <!--Explain and display the results of your method of coming up with the estimate of professor Brownlows betting!-->
+We want to run the simulation many times to get as accurate as possible. 30, 50, 60, and even 1000 are good numbers. The goal is to get the middle 95%. This simulation is going to be running 30 times to get as close to accurate as possible. 
+
+```{r}
+bucket=numeric()
+for (j in 1:30){
+  
+
+
+brownlow=0
+trials = numeric()
+
+for (i in 1:1137) {
+  a<-buildDY(csize = 35)
+  trials[i] = maxdup(a)
+ 
+}
+
+out <- ifelse(trials>=2,1,-2) bets $2, wins= $1, loses = gives back $2
+bucket[j] <- sum(out)
+}
+hist(bucket)
+
+```
 
 
 # Confidence interval of Brownlows earning
