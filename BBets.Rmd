@@ -16,11 +16,36 @@ output: html_document: default
 # Methods
 
 <!--Decide on your methods:  In this section explain the approach you will take to attack the issue --- how will you decide on a likely estimate of professor Brownlow's earnings or losses after 1137 bets. Also explain how you construct a 95% confidence interval about your estimate of his winnings !-->
+We are going to run a simulation using two functions, buildDY and the table function. The buildDY is a function that identifies the class size and a list that covers the length of the data; in this case it is a class of 35 and a list of the months in the year. The table function helps us to identify how many students share a birth month. The max duplicate (maxdup) helps us identify the max amount of people that shared the same birth month.
+```{r}
+buildDY <- function(csize=35){
+  bdlist=1:365
+  out <- sample(bdlist,csize,replace=T)
+}
+
+```
+
+```{r}
+try1=buildDY(csize = 35)
+table(try1)
+
+```
+
+```{r}
+maxdup = function(inlist){
+    out <- max(table(inlist))
+}
+
+```
+
+
 
 
 #Profit Estimate
 
 <!--Explain and display the results of your method of coming up with the estimate of professor Brownlows betting!-->
+
+
 
 
 # Confidence interval of Brownlows earning
