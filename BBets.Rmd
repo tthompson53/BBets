@@ -66,6 +66,27 @@ maxdup = function(inlist){
 
 ```
 
+```{r}
+bucket=numeric()
+for (j in 1:30){
+  
+
+
+brownlow=0
+trials = numeric()
+
+for (i in 1:1137) {
+  a<-buildDY(csize = 35)
+  trials[i] = maxdup(a)
+ 
+}
+
+out <- ifelse(trials>=2,1,-2) 
+bucket[j] <- sum(out)
+}
+hist(bucket)
+
+```
 
 
 
